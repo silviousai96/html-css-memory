@@ -1,27 +1,28 @@
-*{
+/*RESET*/
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
-body{
+/*Common*/
+body {
     font-family: "Nerko One", Arial, Helvetica, sans-serif;
     background-color: #add8e6;
 }
-img{
-    width: 100%;
+
+img {
+    width: 100%;    
     display: none;
+}
+
+.container {    
+    width: 65%;
+    margin: auto;       
 }
 
 /*Header*/
 
-.container{    
-    width: 65%;
-    margin: auto;
-    
-    
-}
-h1{
+header > h1 {
     color: white;
     text-align: center;
     font-size: 60px;
@@ -29,11 +30,10 @@ h1{
 
 /*Main*/
 
-.row{
-        
-    
+.row{            
     text-align: center;
 }
+
 .card{
     width: 20%;
     height: 200px;
@@ -43,34 +43,43 @@ h1{
     background-image: url('../img/pattern.png');
     background-color: white ;
     background-size: contain;
-    border-radius: 15px;
-    position: relative;
-    /*test*/   
-    border: 1px solid white;
-    
-    
+    border: 3px outset white;
+    border-radius: 10px;
+    position: relative;  
 }
+
 .card img{
     display: none;
 }
 
-
-.card:hover{
+.card:hover,.card.face-up {
     background-image: none;
+    
 }
 
-.card:hover img{
+.card:hover img, .card.face-up img {
     display: block;
 }
 
-.card-text{
+.card-text {
     color: #e67919;
     font-size: 25px;
     position: absolute;
-    left: 25%;
-    bottom: 0;
-    display: none;    
+    right: 0;    
+    display: none; 
+    width: 100%;   
+    
 }
-.card:hover .card-text{
+.card:hover .card-text, .card.face-up .card-text {
     display: block;
 }
+
+/*Footer*/
+
+footer > h2 {
+    margin-top: 10px;
+    color: black;
+    text-align: center;
+    font-size: 15px;
+}
+
