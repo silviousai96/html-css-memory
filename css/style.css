@@ -8,6 +8,10 @@ body{
     font-family: "Nerko One", Arial, Helvetica, sans-serif;
     background-color: #add8e6;
 }
+img{
+    width: 100%;
+    display: none;
+}
 
 /*Header*/
 
@@ -15,8 +19,7 @@ body{
     width: 65%;
     margin: auto;
     
-    /*test*/
-    background-color: grey;
+    
 }
 h1{
     color: white;
@@ -27,9 +30,8 @@ h1{
 /*Main*/
 
 .row{
-    background-color: green;
-    height: 200px;
-    border: 1px solid white;
+        
+    
     text-align: center;
 }
 .card{
@@ -37,8 +39,38 @@ h1{
     height: 200px;
     margin: 10px;
     display: inline-block;
-    /*test*/
-    background-color: red;
+    overflow: hidden;
+    background-image: url('../img/pattern.png');
+    background-color: white ;
+    background-size: contain;
+    border-radius: 15px;
+    position: relative;
+    /*test*/   
     border: 1px solid white;
     
+    
+}
+.card img{
+    display: none;
+}
+
+
+.card:hover{
+    background-image: none;
+}
+
+.card:hover img{
+    display: block;
+}
+
+.card-text{
+    color: #e67919;
+    font-size: 25px;
+    position: absolute;
+    left: 25%;
+    bottom: 0;
+    display: none;    
+}
+.card:hover .card-text{
+    display: block;
 }
