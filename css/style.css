@@ -38,6 +38,7 @@ header > h1 {
     width: 20%;
     height: 200px;
     margin: 10px;
+    
     display: inline-block;
     overflow: hidden;
     background-image: url('../img/pattern.png');
@@ -67,7 +68,7 @@ header > h1 {
     position: absolute;
     right: 0;    
     display: none; 
-    width: 100%;   
+    width: 100%;   /*per centrare il testo della carta gli do 100% della linea e prende il margin auto del container */
     
 }
 .card:hover .card-text, .card.face-up .card-text {
